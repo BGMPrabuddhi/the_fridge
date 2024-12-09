@@ -2,7 +2,8 @@ import React, { useState, useEffect } from "react";
 import AddItemForm from "./components/AddItemForm";
 import ItemList from "./components/ItemList";
 import { FaSpinner } from "react-icons/fa";
-import "./App.css";
+import "./App.scss";
+import "./index.css";
 
 const App = () => {
   const [greeting, setGreeting] = useState("");
@@ -114,8 +115,8 @@ const App = () => {
 
   return (
     <div className="app">
-      <h1>{greeting}, Johny!</h1>
-      <p>{recommendation}</p>
+      <h1 className="text-primary-blue text-4xl mb-4">{greeting}, Johny!</h1>
+      <p className="text-lg mb-4">{recommendation}</p>
       <AddItemForm onAddItem={addItem} />
       <ItemList items={items} onDeleteItem={deleteItem} />
     </div>
